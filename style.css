@@ -1,0 +1,119 @@
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container */
+.app-main {
+  width: 95%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(to top, #41efe0, #c0dfec);
+  border-radius: 15px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px;
+}
+
+/* Header */
+.header h4 {
+  text-align: center;
+  color: #ce0d3a;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* Input */
+.input-box {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: azure;
+  color: #6b1ad0;
+  font-weight: bold;
+}
+
+/* Weather Body Two-Column Layout */
+.weather-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  display: none;
+}
+
+/* Left Column: Weather Info */
+.weather-left {
+  flex: 1;
+  background: linear-gradient(to top, #ad08f4, #ed0ee5);
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+.temp {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.min-max, .weather, .basic {
+  margin-top: 10px;
+}
+
+/* Right Column: Suggestions */
+.weather-right {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  border: 2px solid #ce0d3a;
+}
+
+.highlight-box {
+  background-color: #fff7d6;
+  padding: 15px;
+  border-left: 5px solid #f1c40f;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+
+.highlight-box span {
+  font-weight: bold;
+  color: #ce0d3a;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+  .weather-body {
+    flex-direction: column;
+  }
+
+  .temp {
+    font-size: 3rem;
+  }
+}
